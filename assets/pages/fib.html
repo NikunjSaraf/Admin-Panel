@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
+        integrity="sha256-piqEf7Ap7CMps8krDQsSOTZgF+MU/0MPyPW2enj5I40=" crossorigin="anonymous" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>StudyDuniya</title>
+</head>
+
+<body>
+    <!-- START HERE -->
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <a href="../../index.html">
+                    <h3>StudyDuniya</h3>
+                    <h6 class="smalltext">Admin Panel</h6>
+                </a>
+                <strong>SD</strong>
+            </div>
+            <div class="profile">
+                <i class="fas fa-6x fa-user-circle"></i>
+                <h4>John Doe</h4>
+            </div>
+
+            <ul class=" components">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <i class="fas fa-copyright"></i>
+                        Courses
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-bookmark"></i>
+                        Course Material
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="subjects.html">
+                                <i class="fab fa-stripe-s"></i>
+                                Subjects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chapter.html">
+                                <i class="fas fa-paperclip"></i>
+                                Chapters
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="ebooks.html">
+                                <i class="fas fa-book-open"></i>
+                                Ebooks
+                            </a>
+                        </li>
+                        <li>
+                            <a href="videos.html">
+                                <i class=" fas fa-play-circle"></i>
+                                Video Lecture
+                            </a>
+                        </li> -->
+                        <li class="active">
+                            <a href="mcq.html">
+                                <i class="fas fa-check-circle"></i>
+                                MCQS
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="fib.html">
+                                <i class="fas fa-check-circle"></i>
+                                Fill in the Blank
+                            </a>
+                        </li><li class="active">
+                            <a href="true_false.html">
+                                <i class="fas fa-check-circle"></i>
+                                True or False
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="users.html">
+                        <i class="fas fa-user"></i>
+                        Users
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="./assets/pages/login.html" class="logoutbtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Log Out
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-light">
+                        <i class="fas fa-align-left"></i>
+
+                    </button>
+                    <h4>Fill in the Blanks</h4>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <form class="form-inline ml-auto">
+                            <!-- <select name="course_select" id="course_select" class="form-control mr-2"> -->
+
+                            </select>
+                            <input type="text" class="form-control mr-2" id="searchbar"
+                                placeholder="Search for posts, exams & users..">
+
+                        </form>
+                    </div>
+
+                </div>
+            </nav>
+            <div class="content-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="current_course_select">
+                                        Select Course:
+                                    </label>
+                                    <select name="current_course_select" class="form-control">
+                                        <option selected disabled>Select Course</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="form-group col-md-4">
+                                    <label for="current_subject_select">
+                                        Select Subject:
+                                    </label>
+                                    <select name="current_subject_select" class="form-control">
+                                        <option selected disabled>Select Course First</option>
+                                    </select>
+                                </div> -->
+                                <div class="form-group col-md-4">
+                                    <label for="current_course_select">
+                                        Select Level:
+                                    </label>
+                                    <select name="current_level_select" class="form-control">
+                                        <option selected disabled>Select Course First</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container fib-row">
+                    <div class="row mt-4">
+                        <div class="col-md-6 text-center pl-4 pt-2">
+                            <h5>fib Questions</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-success ml-auto" id="addfibebtn" data-toggle="modal"
+                                data-target="#addfibModal">New fib
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <div id="fib-list">
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Add fib MODAL -->
+    <div class="modal" id="addfibModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Question</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="fibform">
+
+
+                        <div class="form-group">
+                            <label for="video_title">Question</label>
+                            <textarea type="text" placeholder="Enter fib Question" class="form-control"
+                                name="fib_question"></textarea>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">A</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Option A" name="optionA">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">B</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Option B" name="optionB">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">C</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Option C" name="optionC">
+                        </div>
+                       
+                        <div class="form-row  mt-2 mx-2" id="single-answer">
+                            <span class="mr-2">Select Correct Answer : </span>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="radio" name="single-answer" id="inlineRadio1"
+                                    value="1">
+                                A
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="radio" name="single-answer" id="inlineRadio2"
+                                    value="2">
+                                B
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="radio" name="single-answer" id="inlineRadio1"
+                                    value="3">
+                                C
+                            </div>
+                           
+                        </div>
+                        <div class="form-group">
+                            <label for="video_title">Solution</label>
+                            <textarea type="text" placeholder="Enter Solution" class="form-control"
+                                name="fib_solution"></textarea>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-primary" data-dismiss="modal" type="submit" value="Add fib"
+                        id="fib-submit-btn">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- EDIT fib MODAL -->
+    <div class="modal" id="editfibModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Question</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="fibform">
+
+                        <input class="form-control" type="text" placeholder="ID" id="fibid" hidden>
+                        <div class="form-group">
+                            <label for="video_title">Question</label>
+                            <textarea type="text" placeholder="Enter fib Question" class="form-control"
+                                name="edit_fib_question"></textarea>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">A</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Option A" name="edit_optionA">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">B</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Option B" name="edit_optionB">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">C</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="Option C" name="edit_optionC">
+                        </div>
+                        
+                        <div class="form-row  mt-2 mx-2" id="edit_single-answer">
+                            <span class="mr-2">Select Correct Answer : </span>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="radio" name="edit_single-answer" id="inlineRadio1"
+                                    value="1">
+                                A
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="radio" name="edit_single-answer" id="inlineRadio2"
+                                    value="2">
+                                B
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="radio" name="edit_single-answer" id="inlineRadio1"
+                                    value="3">
+                                C
+                            </div>
+                           
+                        </div>
+                        <div class="form-group">
+                            <label for="video_title">Solution</label>
+                            <textarea type="text" placeholder="Enter Solution" class="form-control"
+                                name="edit_fib_solution"></textarea>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-warning" data-dismiss="modal" type="submit" value="Update fib"
+                        id="fib-update-btn">
+                </div>
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+
+    <script src="../script/firebaseconfig.js"></script>
+    <script src="../script/app.js"></script>
+
+    <script src="../script/fib.js"></script>
+</body>
+
+</html>
